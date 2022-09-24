@@ -13,11 +13,7 @@ const Pagenation = ({ totalPage, pageLength, limit, page, setPage }) => {
       {Array(totalPage)
         .fill()
         .map((_, i) => (
-          <Button
-            key={i}
-            onClick={() => setPage(i)}
-            isSelect={page === i}
-            cur={page === i ? 'page' : null}>
+          <Button key={i} onClick={() => setPage(i)} isSelect={page === i}>
             {i + 1}
           </Button>
         ))}
