@@ -46,7 +46,7 @@ const MypageComponent = () => {
       <RootContainer>
         {orderList.map((data) => {
           return (
-            <ItemContainer onClick={() => detailHandelr(data.id)}>
+            <ItemContainer onClick={() => detailHandelr(data.id)} key={data.id}>
               <div>ID: {data.id}</div>
               <div>{data.itemName}</div>
             </ItemContainer>
